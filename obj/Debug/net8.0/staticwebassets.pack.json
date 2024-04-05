@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\obj\\Debug\\net8.0\\compressed\\eyjywsydg1.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CoreFronEnd.styles.css",
+      "PackagePath": "staticwebassets\\CoreFronEnd.styles.css"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\images\\eyerus.jpg",
+      "PackagePath": "staticwebassets\\images\\eyerus.jpg"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "d:\\tmp\\Core Test\\CoreFronEnd\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CoreFronEnd.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CoreFronEnd.props",
+      "PackagePath": "build\\CoreFronEnd.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CoreFronEnd.props",
+      "PackagePath": "buildMultiTargeting\\CoreFronEnd.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CoreFronEnd.props",
+      "PackagePath": "buildTransitive\\CoreFronEnd.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

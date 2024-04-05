@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+@using CoreFronEnd.Pages.Components.ProfileMenu
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4 color white height 100px" >
+            <ProfileMenu></ProfileMenu>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>

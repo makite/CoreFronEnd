@@ -1,0 +1,56 @@
+@page "/"
+@using Radzen.Blazor
+@using CoreFronEnd.Pages.ChartReport
+@using CoreFronEnd.Pages.StackBarChart
+<h1 class="dashboard-title"> Dashboard</h1>
+
+<div>
+    <div style="display: flex;">
+        <ChartReport></ChartReport>
+        <StackedBarChart></StackedBarChart>
+    </div>
+</div>
+<div>
+
+</div>
+
+@code {
+    // Dummy data
+    List<ChartDataItem> ChartData = new List<ChartDataItem>
+{
+new ChartDataItem { Label = "Electronics", Value = 120 },
+// Add more data points
+};
+
+    List<MonthlySalesItem> MonthlySalesData = new List<MonthlySalesItem>
+{
+new MonthlySalesItem { Month = "Jan", Sales = 25000 },
+// Add more monthly sales data
+};
+
+    List<ProfitItem> ProfitData = new List<ProfitItem>
+{
+new ProfitItem { Month = "Jan", Profit = 15000 },
+// Add more profit data
+};
+
+    public class ChartDataItem
+    {
+        public string? Label { get; set; }
+        public int Value { get; set; }
+        public string? ValueField { get; set; }
+
+    }
+
+    public class MonthlySalesItem
+    {
+        public string? Month { get; set; }
+        public decimal Sales { get; set; }
+    }
+
+    public class ProfitItem
+    {
+        public string? Month { get; set; }
+        public decimal Profit { get; set; }
+    }
+}

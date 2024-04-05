@@ -1,0 +1,20 @@
+@using Radzen.Blazor
+@namespace CoreFronEnd.Pages.Components.ProfileMenu
+<div>
+
+    <RadzenProfileMenu style="background-color: inherit;">
+        <Template>
+            Jerry &nbsp;
+            <img style="width: 50px;height: 50px;border-radius: 50%;" src="/images/eyerus.jpg" alt="My Image" /> @*
+            <RadzenGravatar Email="user@example.com">
+            </RadzenGravatar> *@
+        </Template>
+        <ChildContent>
+            <RadzenProfileMenuItem Text="Profile" Icon="account_circle" Path="/login"></RadzenProfileMenuItem>
+            <RadzenProfileMenuItem Text="Dialog" Icon="perm_media" Path=""></RadzenProfileMenuItem>
+            <RadzenProfileMenuItem Text="Notification" Icon="announcement" Path=""></RadzenProfileMenuItem>
+            <RadzenProfileMenuItem Text="Logout" Icon="logout" Path="/login"></RadzenProfileMenuItem>
+
+        </ChildContent>
+    </RadzenProfileMenu>
+</div>

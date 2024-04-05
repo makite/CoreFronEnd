@@ -1,0 +1,63 @@
+@using Microsoft.AspNetCore.Authorization;
+@inject AuthService AuthService
+
+@layout LoginLayout
+@page "/login"
+@using Radzen.Blazor
+<RadzenStack Gap="0" Class="rz-my-12 rz-mx-auto rz-border-radius-6 rz-shadow-10"
+    Style="width: 100%; max-width: 400px; overflow: hidden;">
+    <RadzenCard Class="rz-shadow-0 rz-border-radius-0 rz-background-color-info rz-p-12" style="text-align: center;">
+        <RadzenText TextStyle="TextStyle.DisplayH3" Tag="h2" Class="rz-color-white rz-mb-0">Login
+        </RadzenText>
+    </RadzenCard>
+    <RadzenCard Class="rz-shadow-0 rz-p-12">
+        @{
+            string SimpleLogin = "your initial value";
+        }
+        <RadzenTemplateForm Data="SimpleLogin" Action="/home" Method="FormMethod.Post">
+            <RadzenLogin AllowRegister="false" AllowResetPassword="true">
+                <p>@errorMessage</p>
+            </RadzenLogin>
+        </RadzenTemplateForm>
+    </RadzenCard>
+</RadzenStack>
+
+@if (errorMessage != null)
+{
+    <p>@errorMessage</p>
+}
+
+@code {
+    [Inject] private NavigationManager? NavigationManager { get; set; }
+
+    private SimpleLogin simpleLogin;
+    private string? errorMessage;
+
+    public Login()
+    {
+        simpleLogin = new SimpleLogin();
+    }
+
+    private class SimpleLogin
+    {
+        public static string? Username { get; set; }
+        public static string? Password { get; set; }
+    }
+
+    private void HandleSubmit()
+    {
+        // Perform login validation logic here
+        if (Login.SimpleLogin.Username == "admin" && SimpleLogin.Password == "password")
+        {
+            // Redirect to the home page
+            AuthService.IsLoggedIn = true;
+
+            NavigationManager?.NavigateTo("/login");
+        }
+        else
+        {
+            // Display error message
+            errorMessage = "Invalid username or password.";
+        }
+    }
+}

@@ -1,0 +1,60 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Core FrontEnd App</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+<div class="@NavMenuCssClass nav-scrollable">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Dashboard
+            </NavLink>
+        </div>
+        <div class="nav-item px-3"> <span class="bi user-fill-nav-menu" aria-hidden="true"></span>
+            <MenuComponent MenuTitle="Administration" SubMenuItems="administrationSubMenuItems" />
+        </div>
+        <div class="nav-item px-3">
+            <MenuComponent MenuTitle="Maintenance" SubMenuItems="maintenanceSubMenuItems" />
+        </div>
+        <div class="nav-item px-3">
+            <MenuComponent MenuTitle="Transaction" SubMenuItems="transactionSubMenuItems" />
+        </div>
+        <div class="nav-item px-3">
+            <MenuComponent MenuTitle="Reports" SubMenuItems="reportSubMenuItems" />
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = false;
+    private Dictionary<string, bool> parentItemStates = new Dictionary<string, bool>();
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private List<MenuItem> administrationSubMenuItems = new List<MenuItem>
+{
+new MenuItem { Title = "Manage User", Url = "/login" },
+new MenuItem { Title = "Manage Access", Url = "access" }
+};
+
+    private List<MenuItem> maintenanceSubMenuItems = new List<MenuItem>
+{
+new MenuItem { Title = "Add Employee", Url = "addemp" },
+};
+    private List<MenuItem> transactionSubMenuItems = new List<MenuItem>
+{
+new MenuItem { Title = "Promotion", Url = "promotion" },
+};
+    private List<MenuItem> reportSubMenuItems = new List<MenuItem>
+{
+new MenuItem { Title = "All Employees", Url = "/weather" },
+};
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
